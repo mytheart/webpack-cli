@@ -4,26 +4,31 @@
   "description": "webpack配置的各种环境react、vue、ssr等",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
+    "start": "webpack serve",
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mytheart/webpack-cli.git"
+    "url": "git+https://github.com/mytheart/webpack-tpl.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mytheart/webpack-cli/issues"
+    "url": "https://github.com/mytheart/webpack-tpl/issues"
   },
-  "homepage": "https://github.com/mytheart/webpack-cli#readme",
+  "homepage": "https://github.com/mytheart/webpack-tpl#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.4.0",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "lodash": "^4.17.20"
