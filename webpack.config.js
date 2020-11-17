@@ -20,7 +20,7 @@ module.exports = {
         changeOrigin: true, // 更改请求头中的host和origin
       },
     },
-  },  
+  },
   // stats: {
   //   modules: false,
   //   colors: true,
@@ -35,9 +35,30 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.tsx?$/,
+      //   use: 'ts-loader',
+      //   exclude: /node_modules/,
+      // },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]-[hash:5]',
+              },
+              // modules:true
+            },
+          },
+          'less-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

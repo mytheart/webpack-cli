@@ -1,7 +1,13 @@
 // import _ from 'lodash';
+if(module.hot){ // 是否开启了热更新
+  module.hot.accept() // 接受热更新
+}
 import byteDance from './byteDance.png'
 import printMe from './print.js';
-import './style.css';
+import styles from './style.less';
+import './index.less'
+
+console.log(1, styles)
 
 console.log('byteDance', byteDance)
 console.log('test')
@@ -10,7 +16,7 @@ function component() {
   var element = document.createElement('div');
   var btn = document.createElement('button');
 
-  btn.innerHTML = 'Click me and check the console!';
+  btn.innerHTML = 'Click me and check the console and query student';
   btn.onclick = printMe;
 
 
